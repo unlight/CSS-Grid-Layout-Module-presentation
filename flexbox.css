@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.frame {
+	width: 600px;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: Calibri, Arial;
+}
+
+.row {
+	display: flex;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.row,
+.row > * {
+	outline: 2px solid black;
+}
+.frame > * {
+	border: 2px solid black;
+}
+
+header {
+	height: 100px;
+}
+
+.logo {
+	flex-basis: 100px;
+}
+
+.header {
+	flex: 1;	
+}
+
+main.row {
+	flex: 1;
+   flex-direction: row;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.news {
+	flex: 0 0 100px;
+}
+
+.hbox {
+	flex-direction: column;
+   flex: 1;
+}
+
+.logo,
+.header,
+.content,
+.news,
+.footer {
+	padding: 0.5em;
+}
