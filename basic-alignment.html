@@ -1,0 +1,211 @@
+<style type="text/css">
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Calibri, Arial;
+}
+
+.frame {
+   width: 90%;
+   margin: 0 auto;
+   padding: 10px 0;
+   min-height: 100vh;
+}
+
+.frame > * {
+   border: 2px solid black;
+   /*font-size: 35px;*/
+   font-weight: bold;
+   /*padding: 0.5em;*/
+}
+
+.frame {
+	display: grid;
+	grid-template-columns: repeat(3, 33%);
+	grid-template-rows: repeat(3, 30vh);
+}
+
+.demo {
+	display: none;
+	grid-row: 1;
+	grid-column: 1 / span gutter 1;
+	background: darkseagreen;
+	opacity: 0.5;
+}
+
+.frame > *:nth-child(1) { background: #ADFFBC }
+.frame > *:nth-child(2) { background: #4CD98B }
+.frame > *:nth-child(3) {	background: #CDB658 }
+.frame > *:nth-child(4) {	background: #50B491 }
+.frame > *:nth-child(5) {	background: #D3C2D8 }
+.frame > *:nth-child(6) {	background: #F8711D }
+.frame > *:nth-child(7) {	background: #219CB8 }
+.frame > *:nth-child(8) {	background: #42E7B8 }
+.frame > *:nth-child(9) {	background: #20E046 }
+
+
+
+.content {
+	/*border: 1px solid grey;
+	padding: 1px;
+	background: darkseagreen;*/
+	/*display: block;
+  	width: 20px; 
+  	height: 40px;*/
+}
+
+.content:after {
+	/*content: "content";*/
+}
+
+.item {
+  height: 15vh;
+  width: 200px;
+  margin: 3px;
+  padding: 3px;
+}
+
+.lines { 
+	border: 2px dotted red; 
+	/*border: 0;*/
+}
+.row1 { grid-row: 1; grid-column: 1 / 4;}
+.row2 { grid-row: 2; grid-column: 1 / 4;}
+.row3 { grid-row: 3; grid-column: 1 / 4;}
+.col1 { grid-row: 1/4; grid-column: 1 ;}
+.col2 { grid-row: 1/4; grid-column: 2 ;}
+.col3 { grid-row: 1/4; grid-column: 3 ;}
+
+.item span {
+	font-size: 1.45rem;
+	white-space: pre;
+}
+
+
+.justify1 {
+  justify-self: start;
+  align-self: start;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.justify1 span:after {
+  content: 'justify-self: start \A align-self: start';
+}
+
+.justify2 {
+  justify-self: center;
+  align-self: start;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.justify2 span:after {
+  content: 'justify-self: center \A align-self: start';
+}
+
+.justify3 {
+  justify-self: end;
+  align-self: start;
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.justify3 span:after {
+  content: 'justify-self: end \A align-self: start';
+}
+
+.justify4 {
+  justify-self: start;
+  align-self: center;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.justify4 span:after {
+  content: 'justify-self: start \A align-self: center';
+}
+
+.justify5 {
+  justify-self: center;
+  align-self: center;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.justify5 span:after {
+  content: 'justify-self: center \A align-self: center';
+}
+
+.justify6 {
+  justify-self: end;
+  align-self: center;
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.justify6 span:after {
+  content: 'justify-self: end \A align-self: center';
+}
+
+.justify7 {
+  justify-self: start;
+  align-self: end;
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.justify7 span:after {
+  content: 'justify-self: start \A align-self: end';
+}
+
+.justify8 {
+  justify-self: center;
+  align-self: end;
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.justify8 span:after {
+  content: 'justify-self: center \A align-self: end';
+}
+
+
+.justify9 {
+  justify-self: end;
+  align-self: end;
+  grid-row: 3;
+  grid-column: 3;
+}
+
+.justify9 span:after {
+  content: 'justify-self: end \A align-self: end';
+}
+
+
+</style>
+
+<body>
+	<div class="frame">
+	<section class="item justify1"><span class="content"></span></section>
+	<section class="item justify2"><span class="content"></span></section>
+	<section class="item justify3"><span class="content"></span></section>
+	<section class="item justify4"><span class="content"></span></section>
+	<section class="item justify5"><span class="content"></span></section>
+	<section class="item justify6"><span class="content"></span></section>
+	<section class="item justify7"><span class="content"></span></section>
+	<section class="item justify8"><span class="content"></span></section>
+	<section class="item justify9"><span class="content"></span></section>
+
+	<section class="lines row1"></section>
+	<section class="lines row2"></section>
+	<section class="lines row3"></section>
+	<section class="lines col1"></section>
+	<section class="lines col2"></section>
+	<section class="lines col3"></section>
+</div>
+</body>
