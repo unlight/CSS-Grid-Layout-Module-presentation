@@ -169,6 +169,10 @@ body {
    background: rgba(0,0,250, 0.35);
 }
 
+.named_grid_areas main {
+   grid-area: main;
+}
+
 .named_grid_areas header {
    grid-area: header;
 }
@@ -183,4 +187,26 @@ body {
 
 .named_grid_areas .logo {
    grid-area: logo;
+}
+
+@media (max-width: 800px) {
+  .mobile .frame {
+     grid-template-areas: "side   footer footer"
+                          "main   main   main"
+                          "header header logo";
+    }
+}
+
+@media (max-width: 600px) {
+  .mobile .frame {
+     grid-template-areas: "header   header header"
+                          "logo logo logo"
+                          "side side side"
+                          "main   main   main"
+                          "footer   footer   footer"
+
+    }
+    .logo {
+      display: none;
+    }
 }
